@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>geolocation</title>
+</head>
+<body>
+	<h1>trace your location</h1>
+	<button id="click" onclick="getLocation()">Get Location</button>
+	<div id="output" onclick="post()"></div>
+	<script>
+	var x=document.getElementById('output');
+	function getLocation(){
+	if(navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(showposition);
+	}
+	else{
+	x.innerHTML="BROWSER NOT SUPPORTING";
+	}
+	}
+	function showposition(position){
+		var latitude=position.coords.latitude;
+		var longitude=position.coords.longitude;
+		window.location.href="http://localhost/fast%20go/somepages.php?latitud="+latitude+"&longitud="+longitude;
+	}
+	document.getElementById("click").onclick=function(){
+	alert("thank you you will get better experience");
+	}
+	</script>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	</body>
+</html>

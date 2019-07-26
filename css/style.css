@@ -1,0 +1,67 @@
+html,body,header{
+    height:100%;
+}
+body{
+	overflow-x:hidden;
+}
+#intro{
+	height:100%;
+}
+#menmassage{
+	height:85%;
+}
+#home1,#refr,#home,#chef,#hair,#clgfst,#reception,#home3,#ro,#wm{
+height:85%;
+}
+#hair{
+background: url("www.gleamsalon.com/wp-content/uploads/2015/08/the-undercut.jpg")no-repeat center center; 
+background-size: cover;
+}
+#refr{
+background: url("fullfridgerepairsperth.com.au/images/fridge-repair-servicing%20.jpeg")no-repeat center center; 
+background-size: cover;
+}
+#ro{
+background: url("https://i.ytimg.com/vi/J4MIWZXHeo0/hqdefault.jpg")no-repeat center center; 
+background-size: cover;
+}
+#wm{
+background: url("http://www.asapapplianceservice.com/wp-content/uploads/2016/04/appliance-repair-shares-tips-on-washing-machine-care.jpg")no-repeat center center; 
+background-size: cover;
+}
+#chef{
+background: url("http://resources.mynewsdesk.com/image/upload/t_open_graph_image/nct2ixa9unz1jbuhevbg.jpg")no-repeat center center; 
+background-size: cover;	
+}
+#menmassage{
+background: url("https://thumbs.dreamstime.com/z/hands-woman-making-massage-women-men-spa-time-relax-34757803.jpg")no-repeat center center; 
+background-size: cover;	
+}
+#home{
+background: url("https://www.marchelassociates.com/wp-content/uploads/expert-witness-services.jpg")no-repeat center center; 
+background-size: cover;
+}
+#clgfst{
+background: url("https://diyparty99.com/wp-content/uploads/2017/11/simple-stage-decoration-for-graduation-decoration-ideas-for-college-fest-decoration-image-idea.jpg")no-repeat center center; 
+background-size: cover;
+}
+#reception{
+background: url("3.bp.blogspot.com/_Dl_lkKCuXho/TA1reOybZ_I/AAAAAAAA3xI/VqWRZmKnMgI/s1600/SarahYates_12.jpg")no-repeat center center; 
+background-size: cover;
+}
+#home1{
+background: url("https://braesd.com/wp-content/uploads/2016/12/nice-birthday-party-decorations-images-for-luxurious-article.jpg")no-repeat center center; 
+background-size: cover;
+}
+#home3{
+background: url("www.juliettearmand.ie/wp-content/uploads/2016/06/male-facial-massage.jpg
+")no-repeat center center; 
+background-size: cover;
+}
+#intro{
+    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/8-col/img%20(73).jpg")no-repeat center center; 
+    background-size: cover;
+}
+a{
+    color:black;
+}

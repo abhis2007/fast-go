@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fastgo.com</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+	<style type="text/css">
+        .btn-success{
+            margin-left:50%;
+        }
+        #header{
+            color:coral;
+            font-family:cursive;
+        }
+		#firstnames,#lastnames,#emails,#states,#citys,#localitys1,#localitys2,#phonenumbers,#emailsids{
+		font-size:125%;
+		font-weight:bold;
+		text-align:center;
+		font-family:cursive;
+		color:red;
+		}
+    </style>
+</head>
+<body>
+    <div class="row">
+		<div class="col-sm-0 col-md-2 col-lg-2 col-xl-2"></div>
+		<div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+		<div class="card mt-4">
+			<div class="card-body">
+				<p class="h2 dark-text text-center">Register</p>	
+				<form action="upload.php" enctype="multipart/form-data" method="POST" onsubmit="return validation()">
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+						<div class="md-form">
+							<input type="text" class="form-control" id="firstname" name="firstname">
+							<label >First Name</label>
+						</div>
+						<span id="firstnames"></span>
+					</div>
+					<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+					<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+						<div class="md-form">
+								<input type="text" class="form-control" id="lastname" name="lastname">
+								<label class="font-weight-light" id="lastname">Last Name</label>
+							</div>
+							<span id="lastnames"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+						<div class="md-form">
+							<input type="email" class="form-control" id="email" name="email">
+							<label>Email</label>
+						</div>
+						<span id="emails"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+							<div class="md-form">
+								<input type="text" class="form-control" id="state" name="state">
+								<label >State</label>
+							</div>
+							<span id="states"></span>
+					</div>
+					<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+					<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+							<div class="md-form">
+								<input type="text" class="form-control"id="city" name="city">
+								<label class="font-weight-light">City</label>
+							</div>
+							<span id="citys"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+						<div class="md-form">
+						<input type="text" class="form-control" id="locality1" name="locality1">
+						<label>Locality1</label>
+					</div>
+					<span id="localitys1"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+						<div class="md-form">
+						<input type="text" class="form-control" id="locality2" name="locality2">
+						<label>Locality2</label>
+					</div>
+					<span id="localitys2"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+							<div class="md-form">
+								<input type="number" class="form-control"id="phonenumber" name="phonesnumber">
+								<label >PHONE OTP</label>
+							</div>
+							<span id="phonenumbers"></span>
+					</div>
+					<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5"></DIV>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+							<div class="md-form">
+								<input type="number" class="form-control"id="emailsid" name="emailsid">
+								<label >EMAIL OTP</label>
+							</div>
+							<span id="emailsids"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+						<input type="radio">
+						<label>Agree Our Terms And conditions.</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+						<div class="row">
+							<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5"></div>
+						<div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+							<button type="submit" class="btn btn-success btn-block rounded-pill">Register</button>
+						</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				</div>					
+		</div>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	function validation(){
+	var first_name=document.getElementById('firstname').value;
+	if(first_name==""){
+	document.getElementById('firstnames').innerHTML="Please enter owner name";
+	return false;
+	}
+	var last_name=document.getElementById('lastname').value;
+	if(last_name==""){
+	document.getElementById('lastnames').innerHTML="Please enter owner name";
+	return false;
+	}
+	var email_id=document.getElementById('email').value;
+	if(email_id==""){
+	document.getElementById('emails').innerHTML="Please enter latitude";
+	return false;
+	}
+	var statename=document.getElementById('state').value;
+	if(statename==""){
+	document.getElementById('states').innerHTML="Please enter longitude";
+	return false;
+	}
+	var cityname=document.getElementById('city').value;
+	if(cityname==""){
+	document.getElementById('citys').innerHTML="Please enter longitude";
+	return false;
+	}
+	var locality_1=document.getElementById('locality1').value;
+	if(locality_1==""){
+	document.getElementById('localitys1').innerHTML="Please enter contact no";
+	return false;
+	}
+	var locality_2=document.getElementById('locality2').value;
+	if(locality_2==""){
+	document.getElementById('localitys2').innerHTML="Please enter contact no";
+	return false;
+	}
+	var phone_number=document.getElementById('phonenumber').value;
+	if(phone_number==""){
+	document.getElementById('phonenumbers').innerHTML="Please enter contact no";
+	return false;
+	}
+	var emails_id=document.getElementById('emailsid').value;
+	if(emails_id==""){
+	document.getElementById('emailsids').innerHTML="Please enter contact no";
+	return false;
+	}
+	}
+	</script>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+</html>
+
+
+
+
+

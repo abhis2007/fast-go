@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<title>autocomplete</title>
+	</head>
+	<body>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed in=true&libraries=places"></script>
+		<script type="text/javascript">
+			google.maps.event.AddDomListener(window,'load',intilize);
+			function intilize(){
+				var autocomplete=new google.maps.places.Autocomplete(document.getElementById('autocompleter'));
+				google.maps.events.AddListener(autocomplete,'place_changed',function(){
+					var places=autocomplete.getPlace();
+					var location="<b>Location: </b>"+places.formatted_address+"<br />";
+				location+="<b>Latitude: </b>"+places.geometry.location.A+"<br />";
+				location+="<b>Longitude: </b>"+places.geometry.location.F+"<br />";
+				document.getElementById('lblresult').innerHTML=location;
+				});
+				
+			}
+		</script>
+		<span>Location:</span><input type="text" id="autocompleter" placeholder="enter the address"><br />
+		<label id="lblresult"></label>
+	</body>
+</html>

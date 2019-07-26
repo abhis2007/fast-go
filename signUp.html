@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>NSEC project</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <style type="text/css">
+  #username,#password,#firstname,#lastname,#email,#phonenumber{
+		font-size:115%;
+		font-family:cursive;
+	}
+  </style>
+  
+</head>
+
+<body>
+  <!-- Start your project here-->
+    <header>
+        <!--Navbar -->
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark fixed-top default-color">
+            <div class="container">
+                <a class="navbar-brand " href="">Navbar</a>
+                <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.php">
+                                Signin
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#signUpPanel">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section">Features</a>
+                        </li>                      
+                    </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item avatar">
+                            <a class="nav-link p-0" href="#">
+                                <img src="ABHI2.jpeg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar -->
+		
+		<!--background-image-->
+        <div id="intro1" class="view">
+            <div class="mask rgba-blue-grey-strong ">
+				<div class="row flex-center">
+					<div class="col-sm-2 col-md-1"></div>
+					<div class="col-sm-3">
+						<img id="img" src="images/ABHI2.JPEG" class="rounded-circle mt-5">
+					</div>
+					<div class="col-sm-4">
+						<div class="full-bg-img">
+							<div class="display-3 font-bold white-text"><h3 class="flex-center"><span>Abhishek kumar</span></h3></div>
+							<hr class="hr-light">
+							<div class="white-text flex-center"><h5>A FULL STACK DEVELOPER</h5></div>
+						</div> 
+					</div>
+					<div class="col-sm-4"></div>				
+				</div>
+            </div>
+        </div>	
+		
+        <!--background-image--> 
+        <!--background-image-->
+        <div id="intro" class="view">
+            <div class="mask rgba-blue-grey-strong ">
+                <div id="signUpPanel" class="row mt-3">
+                    <div class="col-md-6 col-lg-7 col-sm-0 col-xl-7 col-xs-0"></div>
+                    <div class="col-md-6 col-lg-5 col-sm-12 col-xl-5 col-xs-12">
+                        <br /><br/>
+                        <!-- register -->
+                        <div class="card">
+                            <h5 class="card-header secondary-color white-text text-center py-4">
+                                <strong>Sign up</strong>
+                            </h5>
+
+                            <!--Card content-->
+                            <div class="card-body px-lg-5 pt-0">
+
+                                <!-- Form -->
+                                <form class="text-center" action="new account.php" method="POST" style="color: #808080;" onsubmit="return validation()">
+
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <!-- First name -->
+                                            <div class="md-form">
+                                                <input type="text" id="materialRegisterFormFirstName" class="form-control" name="firstname">
+                                                <label for="materialRegisterFormFirstName">First name</label>
+												<span id="firstname" class="text-danger font-weight-bold"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Last name -->
+                                            <div class="md-form">
+                                                <input type="email" id="materialRegisterFormLastName" class="form-control" name="lastname">
+                                                <label for="materialRegisterFormLastName">Last name</label>
+												<span id="lastname" class="text-danger font-weight-bold "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- E-mail -->
+                                    <div class="md-form mt-0">
+                                        <input type="email" id="materialRegisterFormEmail" class="form-control" name="email">
+                                        <label for="materialRegisterFormEmail">E-mail</label>
+										<span id="email" class="text-danger font-weight-bold "></span>
+                                    </div>
+
+                                    <!-- Username -->
+                                    <div class="md-form mt-0">
+                                        <input type="text" id="materialRegisterFormUsername" class="form-control" name="username">
+                                        <label for="materialRegisterFormUsername">Usename</label>
+										<span id="username" class="text-danger font-weight-bold "></span>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="md-form">
+                                        <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="password">
+                                        <label for="materialRegisterFormPassword">Password (At least 8 characters and 1 digit)</label> 
+										<span id="password" class="text-danger font-weight-bold "></span>
+                                    </div>
+									    <!-- First name -->
+                                            <div class="md-form">
+                                                <input type="text" id="materialRegisterFormConfirmPassword" class="form-control" name="cnfpassword">
+                                                <label for="materialRegisterFormFirstName">confirm password</label>
+												<span id="cnfpasswords" class="text-danger font-weight-bold"></span>
+                                            </div>
+                                        
+                                    <!-- Phone number -->
+                                    <div class="md-form">
+                                        <input type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="phonenumber">
+                                        <label for="materialRegisterFormPhone">Phone number</label>
+										<span id="phonenumber" class="text-danger font-weight-bold "></span>
+                                    </div></div>
+                                    <!-- Sign up button -->
+                                    <button class="btn btn-block blue-gradient rounded-pill" type="submit" name="submit">Sign up</button>
+                                    <large class="form-text text-muted mb-4 text-center">
+                                        <a href="login.php"><h5>Sign in</h5></a>
+                                    </large>
+                                    <hr>
+                                    <!-- Terms of service -->
+                                    <p>
+                                        By clicking
+                                        <em>Sign up</em> you agree to our
+                                        <a href="" target="_blank">terms of service</a>
+
+                                </form>
+                                <!-- Form -->
+
+                            </div>
+
+                        </div>
+                        <!-- register -->
+                    </div>
+                </div>
+                        
+            </div>
+        </div>
+        <!--background-image-->  
+    </header>
+  
+  <footer>
+
+  </footer>
+  <!-- /Start your project here-->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript">
+  function validation(){
+  var firstsname=document.getElementById('materialRegisterFormFirstName').value;
+  if(firstsname==""){
+  document.getElementById('firstname').innerHTML="enter your first name";
+  return false;
+  }
+  var lastsname=document.getElementById('materialRegisterFormLastName').value;
+  if(lastsname==""){
+  document.getElementById('lastname').innerHTML="enter your last name";
+  return false;
+  }
+  var emails=document.getElementById('materialRegisterFormEmail').value;
+  if(emails==""){
+  document.getElementById('email').innerHTML="enter your last name";
+  return false;
+  }
+  if(username)
+  var usersname=document.getElementById('materialRegisterFormUsername').value;
+  if(usersname==""){
+  document.getElementById('username').innerHTML="enter user name";
+  return false;
+  }
+  var passwords=document.getElementById('materialRegisterFormPassword').value;
+  if(passwords==""){
+  document.getElementById('password').innerHTML="enter your password";
+  return false;
+  }
+  var phonenumbers=document.getElementById('materialRegisterFormPhone').value;
+  if(phonenumbers==""){
+  document.getElementById('phonenumber').innerHTML="enter your phone number";
+  return false;
+  }
+  }
+ </script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js">
+  </script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fastgo.com</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Start your project here-->
+    <header>
+        
+        <!--background-image-->
+        <div id="intro" class="view">
+            <div class="mask rgba-blue-grey-strong ">
+                <div id="signInPanel" class="row px-3 mr-3">
+                    <div class="col-md-3 lg-3 col-sm-0"></div>
+                    <div class="col-md-7 lg-7 col-sm-12">
+					<div class="row">
+							<div class="col-sm-0 col-md-12 col-lg-12 col-xl-12"></div>
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="btn btn-secondary btn-lg mt-5" id="click" onclick="getLocation()">Enable your Location</div>
+								</div>
+							</div>
+						</div>
+                        <br /><br /><br />
+                        <!-- login -->
+                        <div class="card">
+                            
+                            <!--Card content-->
+                            <div class="card-body px-lg-5 pt-4">
+                                <!-- Form -->
+                                <form class="text-center" style="color: #757575;" action="vehicle_customer.php" method="POST">
+                                    <!-problem-->
+                                    <div class="md-form">
+                                        <input type="text" id="materialLoginFormIssue" class="form-control" name="issue">
+                                        <label for="materialLoginFormUsername">Issue</label>
+                                    </div>
+                                    <!-- Password -->
+                                    
+                                    <div class="md-form">
+                                        <input type="number" id="materialLoginFormNumber" class="form-control" name="contact_no">
+                                        <label for="materialLoginFormContactNo">Contact number</label>
+                                    </div>
+                                    <div class="d-flex justify-content-around">
+                                        <div>
+                                            <!-- Remember me -->
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                                                <label class="form-check-label" for="materialLoginFormRemember">Remember me</label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <!-- Forgot password -->
+                                            <a href="">Forgot password?</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sign in button -->
+                                    <button class="btn btn-block aqua-gradient rounded-pill" type="submit" name="submit">Submit</button>
+                                    <!-- Register -->
+                                    <p>
+                                        Do you want to know us?
+                                        <a href="signUp.html">Register</a>
+                                    </p>
+                                </form>
+                                <!-- Form -->
+                            </div>
+                        </div>
+                        <!--form login -->
+						
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--background-image-->
+    </header>
+    <script>
+	var x=document.getElementById('output');
+	function getLocation(){
+	if(navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(showposition);
+	}
+	else{
+	x.innerHTML="BROWSER NOT SUPPORTING";
+	}
+	}
+	function showposition(position){
+		var latitude=position.coords.latitude;
+		var longitude=position.coords.longitude;
+		window.location.href="http://localhost/fast%20go/somepages.php?latitud="+latitude+"&longitud="+longitude;
+	}
+	</script>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+</html>
+
+
+
+
+
